@@ -1,0 +1,27 @@
+service: multicloud-deployment-aws
+
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+# you can overwrite defaults here
+  stage: dev
+  region: us-east-1
+
+functions:
+  create:
+    handler: handler.create
+    events:
+      - http:
+          path: /create
+          method: GET 
+          cors: true
+
+  delete:
+    handler: handler.Delete
+    events:
+      - http:
+          path: /delete
+          method: GET 
+          cors: true

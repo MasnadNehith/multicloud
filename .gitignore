@@ -1,0 +1,6 @@
+./aws/.serverless
+./aws/.node_modules
+./azure/.serverless
+./azure/.node_modules
+./gcp/.serverless
+./gcp/.node_modules
