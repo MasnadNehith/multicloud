@@ -1,6 +1,6 @@
-./aws/.serverless
-./aws/.node_modules
-./azure/.serverless
-./azure/.node_modules
-./gcp/.serverless
-./gcp/.node_modules
+./first-deployments/aws/.serverless
+./first-deployments/aws/.node_modules
+./first-deployments/azure/.serverless
+./first-deployments/azure/.node_modules
+./first-deployments/gcp/.serverless
+./first-deployments/gcp/.node_modules
