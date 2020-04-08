@@ -1,0 +1,22 @@
+service: multicloudsmsfunctions
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+  environment:
+    TWILIO_ACCOUNT_SID: ACda9b0dcc16b62477b6dda8cb8815b03d
+    TWILIO_AUTH_TOKEN: 3d5a46325d9914a6b67f5e8066280b48
+    TWILIO_PHONE_NUMBER: +13348458430
+
+functions:
+  send-sms:
+    handler: handler.send
+    events:
+      - http:
+          method: post
+          path: send

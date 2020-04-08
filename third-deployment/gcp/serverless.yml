@@ -1,0 +1,25 @@
+service: multiclouddeploymentcalculator
+
+provider:
+  name: google
+  stage: dev
+  runtime: nodejs8
+  region: us-central1
+  project: multiclouddeploymentgcp
+ 
+  credentials: keyfile.json
+
+plugins:
+  - serverless-google-cloudfunctions
+
+package:
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .git/**
+
+functions:
+  calculate:
+    handler: http
+    events:
+      - http: path

@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: azure
+service: multicloud-azure-deployments
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -20,7 +20,7 @@ service: azure
 provider:
   name: azure
   region: North Europe
-  runtime: nodejs.x
+  runtime: nodejs10.x
   # prefix: "sample"  # prefix of generated resource name
   # subscriptionId: A356AC8C-E310-44F4-BF85-C7F29044AF99
   # stage: dev

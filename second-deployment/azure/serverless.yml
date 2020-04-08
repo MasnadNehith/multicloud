@@ -1,0 +1,38 @@
+service: multiclouddeploymentsmsapp
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: azure
+  region: North Europe
+  runtime: nodejs10.x
+  environment:
+    TWILIO_ACCOUNT_SID: 'ACda9b0dcc16b62477b6dda8cb8815b03d'
+    TWILIO_AUTH_TOKEN: '3d5a46325d9914a6b67f5e8066280b48'
+    TWILIO_PHONE_NUMBER: '+13348458430'
+
+plugins: # look for additional plugins in the community plugins repo: https://github.com/serverless/plugins
+  - serverless-azure-functions
+
+# you can add packaging information here
+package:
+  # include:
+  #   - include-me.js
+  #   - include-me-dir/**
+  exclude:
+    # - exclude-me.js
+    # - exclude-me-dir/**
+    - local.settings.json
+    - .vscode/**
+
+functions:
+  sendsms:
+    handler: src/handlers/hello.send
+    events:
+      - http: true
+        x-azure-settings:
+          methods:
+            - POST
+          authLevel: anonymous # can also be `function` or `admin`

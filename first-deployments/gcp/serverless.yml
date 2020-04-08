@@ -33,5 +33,3 @@ functions:
     handler: destroy 
     events:
       - http: destroy
-
-

@@ -1,0 +1,18 @@
+service: multiclouddeploymentcal
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  calculate:
+    handler: handler.calculate
+    events:
+      - http:
+          method: post
+          path: calculate
