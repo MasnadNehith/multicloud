@@ -16,4 +16,8 @@
 ./third-deployment/azure/.node_modules
 ./third-deployment/gcp/.serverless
 ./third-deployment/gcp/.node_modules
+./fourth-deployment/aws/.serverless
+./fourth-deployment/aws/.node_modules
+./fourth-deployment/azure/.serverless
+./fourth-deployment/azure/.node_modules
 

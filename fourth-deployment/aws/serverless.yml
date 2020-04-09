@@ -1,0 +1,40 @@
+service: multiclouddeploymentblog
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage,'dev'}
+  region: us-east-1
+  environment:
+    MONGODB: ${self:custom.MONGODB.${self:provider.stage}}
+
+custom:
+  MONGODB:
+    local: 'mongodb://localhost:27017'
+    dev: 'mongodb+srv://masnad:Qwerty123456@cluster0-xwosk.gcp.mongodb.net/test?retryWrites=true&w=majority'
+
+functions:
+  create:
+    handler: handler.create
+    events:
+      - http:
+          method: post
+          path: create
+  
+  get:
+    handler: handler.get
+    events:
+      - http:
+          method: get
+          path: get
+
+  status:
+    handler: handler.status
+    events:
+      - http:
+          method: GET
+          path: status
+
