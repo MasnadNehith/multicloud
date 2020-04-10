@@ -23,6 +23,7 @@ functions:
       - http:
           method: post
           path: create
+          cors: true
   
   get:
     handler: handler.get
@@ -30,6 +31,7 @@ functions:
       - http:
           method: get
           path: get
+          cors: true
 
   status:
     handler: handler.status
@@ -37,4 +39,5 @@ functions:
       - http:
           method: GET
           path: status
+          cors: true
 
