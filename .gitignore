@@ -20,4 +20,6 @@
 ./fourth-deployment/aws/.node_modules
 ./fourth-deployment/azure/.serverless
 ./fourth-deployment/azure/.node_modules
+./fifth-deployment/aws/.serverless
+./fifth-deployment/aws/.node_modules
 
