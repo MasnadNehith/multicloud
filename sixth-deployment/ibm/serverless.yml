@@ -1,0 +1,17 @@
+service: multicloudmicroservice
+
+# Remember to install project dependencies to register the provider plugin.
+# $ npm install
+provider:
+  name: openwhisk
+
+functions:
+  getPrice:
+    handler: handler.getPrice
+    events:
+      - http : GET getPrice
+
+# extend the framework using plugins listed here:
+# https://github.com/serverless/plugins
+plugins:
+  - serverless-openwhisk

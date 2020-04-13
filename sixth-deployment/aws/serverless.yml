@@ -1,0 +1,23 @@
+service: multicloudmicroservie
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  authorize:
+    handler: handler.authorize
+    events:
+      - http:
+          path: authorize
+          method: post
+
+  decode:
+    handler: handler.decode
+    events:
+      - http:
+          path: decode
+          method: post

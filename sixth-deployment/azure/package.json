@@ -1,0 +1,19 @@
+{
+  "name": "azure",
+  "version": "1.0.0",
+  "description": "Azure Functions sample for the Serverless framework",
+  "scripts": {
+    "test": "echo \"No tests yet...\"",
+    "start": "func host start"
+  },
+  "keywords": [
+    "azure",
+    "serverless"
+  ],
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "serverless-azure-functions": "^1.0.0"
+  }
+}

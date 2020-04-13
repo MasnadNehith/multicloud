@@ -21,5 +21,12 @@
 ./fourth-deployment/azure/.serverless
 ./fourth-deployment/azure/.node_modules
 ./fifth-deployment/aws/.serverless
-./fifth-deployment/aws/.node_modules
+./sixth-deployment/aws/.node_modules
+./sixth-deployment/aws/.serverless
+./sixth-deployment/gcp/.node_modules
+./sixth-deployment/gcp/.serverless
+./sixth-deployment/azure/.node_modules
+./sixth-deployment/azure/.serverless
+./sixth-deployment/ibm/.node_modules
+./sixth-deployment/ibm/.serverless
 
